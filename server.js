@@ -13,11 +13,8 @@ const apiSecret =
 const serverClient = new StreamChat(apiKey, apiSecret);
 
 // CORS configuration
-const corsOptions = {
-  origin: "https://chatappown.vercel.app/", // Replace with your frontend origin
-  optionsSuccessStatus: 200,
-};
-app.use(cors(corsOptions));
+app.options("*", cors()); // include before other routes
+app.use(cors());
 
 // Route to get token for a specific user
 app.get("/static-token", (req, res) => {
