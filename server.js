@@ -14,7 +14,7 @@ const serverClient = new StreamChat(apiKey, apiSecret);
 
 // CORS configuration
 const corsOptions = {
-  origin: "https://chatappown.vercel.app", // Replace with your frontend origin
+  origin: "https://chatappown.vercel.app/", // Replace with your frontend origin
   optionsSuccessStatus: 200,
 };
 app.use(cors(corsOptions));
