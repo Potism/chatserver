@@ -1,4 +1,3 @@
-// server.js
 const express = require("express");
 const { StreamChat } = require("stream-chat");
 const bodyParser = require("body-parser");
@@ -13,7 +12,6 @@ const apiSecret =
 const serverClient = new StreamChat(apiKey, apiSecret);
 
 // CORS configuration
-app.options("*", cors()); // include before other routes
 app.use(cors());
 
 // Route to get token for a specific user
